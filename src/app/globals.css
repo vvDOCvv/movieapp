@@ -1,0 +1,69 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --primary: #18181b;
+  --background: #fafafa;
+  --text: #18181b;
+  --secondaryText: #71717a;
+  --border: #d4d4d8;
+  --hover: #e4e4e7;
+  --icon: #52525b;
+  --buttonText: #fafafa;
+  --loading: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.35)
+    rgba(0, 0, 0, 0.5);
+}
+
+.dark {
+  --primary: #fafafa;
+  --background: #18181b;
+  --text: #fafafa;
+  --secondaryText: #a1a1aa;
+  --border: #3f3f46;
+  --hover: #3f3f46;
+  --icon: #a1a1aa;
+  --buttonText: #18181b;
+  --loading: rgba(255, 255, 255, 0.15) rgba(255, 255, 255, 0.25)
+    rgba(255, 255, 255, 0.35) rgba(255, 255, 255, 0.5);
+}
+
+button {
+  outline: none;
+}
+
+button:disabled {
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+input {
+  outline: none;
+}
+
+.svg {
+  color: var(--icon);
+  width: 20px;
+  height: 20px;
+}
+
+.loader {
+  border: 8px solid;
+  border-color: var(--loading);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  width: 42px;
+  height: 42px;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
