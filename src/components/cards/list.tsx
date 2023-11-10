@@ -30,7 +30,7 @@ export const List = ({ movies }: Props) => {
           return (
             <div key={index} className="flex gap-x-4 overflow-hidden">
               <Link href={`/details/${id}`}>
-                <figure className="min-w-[210px] h-[300px] max-sm:min-w-[110px] max-sm:h-[150px]">
+                <figure className="w-[210px] h-[300px] max-sm:w-[110px] max-sm:h-[160px]">
                   <Image
                     src={
                       poster_path
