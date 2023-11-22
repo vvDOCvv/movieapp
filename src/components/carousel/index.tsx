@@ -85,7 +85,9 @@ export const Carousel = ({ title, href, data }: Props) => {
             }: any) => {
               const path = name ? profile_path : poster_path;
               const link = name ? `/person/${id}` : `/details/${id}`;
-              const releaseYear = new Date(release_date).getFullYear();
+              const releaseYear = release_date
+                ? new Date(release_date).getFullYear()
+                : "N/A";
 
               return (
                 <SwiperSlide key={id}>

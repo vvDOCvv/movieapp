@@ -1,6 +1,5 @@
 import { baseApi } from "../baseApi";
-import { Details, Movies } from "@/types/movie";
-import { Credits } from "@/types/credits";
+import { Movies } from "@/types/movie";
 import { Collections } from "@/types/collection";
 import { API_KEY } from "@/utils/constants";
 

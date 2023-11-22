@@ -25,7 +25,9 @@ export const List = ({ movies }: Props) => {
           },
           index
         ) => {
-          const releaseYear = new Date(release_date).getFullYear();
+          const releaseYear = release_date
+            ? new Date(release_date).getFullYear()
+            : "N/A";
 
           return (
             <div key={index} className="flex gap-x-4 overflow-hidden">

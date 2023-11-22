@@ -17,7 +17,9 @@ export const Grid = ({ movies }: Props) => {
           { id, title, poster_path, vote_average, vote_count, release_date },
           index
         ) => {
-          const releaseYear = new Date(release_date).getFullYear();
+          const releaseYear = release_date
+            ? new Date(release_date).getFullYear()
+            : "N/A";
 
           return (
             <div key={index} className="flex flex-col overflow-hidden">

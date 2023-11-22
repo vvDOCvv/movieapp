@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 
 export const SwitchTheme = () => {
-  const { resolvedTheme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -19,15 +19,11 @@ export const SwitchTheme = () => {
   return (
     <button
       className="flex items-center gap-x-3 py-3 px-4"
-      onClick={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
-      {resolvedTheme === "light" ? (
-        <Sun className="svg" />
-      ) : (
-        <Moon className="svg" />
-      )}
+      {theme === "light" ? <Sun className="svg" /> : <Moon className="svg" />}
       <div className="max-md:hidden">
-        {resolvedTheme === "light" ? "Light" : "Dark"} mode
+        {theme === "light" ? "Light" : "Dark"} mode
       </div>
     </button>
   );
